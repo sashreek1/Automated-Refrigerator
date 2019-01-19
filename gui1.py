@@ -102,7 +102,7 @@ class Application:
 		self.text_box1=Entry(self.tool_frame).place(x=30,y=120)
 		self.add_message2=Label(self.tool_frame,text="Enter expiry date of Item (DD-MM-YYYY)").place(x=30,y=150)
 		self.text_box2=Entry(self.tool_frame).place(x=30,y=180)
-		self.enter= Button(self.tool_frame, text='Enter', command=the_inventory.add_item(self.text_box.get(),self.text_box1().get(),self.text_box2().get())).place(x=60,y=200)
+		self.enter= Button(self.tool_frame, text='Enter', command=the_inventory.add_item(self.text_box.get(),self.text_box1.get(),self.text_box2.get())).place(x=60,y=200)
 		print(the_inventory.inv)
 		#self.bar_button = Button(self.tool_frame,text = 'Use Barcode').place(x=30, y=65)
 
