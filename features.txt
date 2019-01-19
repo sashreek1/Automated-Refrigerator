@@ -1,0 +1,19 @@
+Features 
+o	Bar code scanner  
+o	Recipe matcher 
+o	Cool UI 
+o	Ping amazon pantry(buy milk everyday(optional)) 
+o	Warns about expired or empty bottles  
+o	Fitness care 
+o	Sticky notes 
+o	Drastic Price change(ask to stack veggies that are cheap now and will become costlier) 
+o	Early reminder system for near expired stuff(just before cooking time) 
+o	Remind for defrost of food 
+o	Cold water (reminder for filling) 
+o	SMS notifications (on the smartphone) 
+o	Automated grocery list 
+o	Buy items for cooking based on upcoming festivals early ((Diwali : halwa,flowers)(pongal:rice,jaggery) etc 
+o	Remind to soak pulses overnight on a specific day 
+o	Always refill the ice tray when used 
+o	Reminder for insulin (all people store insulin in the fridge and may forget it)
+o	temperature check to prevent food from spoiling
