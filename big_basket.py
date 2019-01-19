@@ -12,4 +12,3 @@ def open_amazon(item):#setup Edge browser to use the proxies
     time.sleep(20)
     print('closing driver')
     driver.close()
-

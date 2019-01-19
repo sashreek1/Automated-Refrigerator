@@ -50,11 +50,12 @@ def display(im, decodedObjects):
  
   # Display results 
   cv2.imshow("Results", im);
-  cv2.waitKey(1);
+  cv2.waitKey(1)
   time.sleep(4)
-   
 
 def scan_code():
+    #show_webcam()
     frame = pic_cap()  
     decodedObjects = decode(frame)
     display(frame, decodedObjects)
+scan_code()

@@ -11,8 +11,11 @@ import big_basket
 class Inventory():
     def __init__(self,inv):
         self.inv=inv
+    def add_item_middle():
+    	self.add_item(main_app.text_box.get(),main_app.text_box1.get(),main_app.text_box2.get())
     def add_item(name=None, quantity=0, expiry=None):
         self.inv[name]= {"quantity":str(quantity) , "expiry":expiry}
+        print(self.inv)
     def remove_item(name=None):
         self.inv.pop(name)
     def retrieve_quantity(item):
@@ -97,13 +100,17 @@ class Application:
 		self.destroy_frames()
 		self.new_frames()
 		self.add_message=Label(self.tool_frame,text="Which item would you like to add ?").place(x=30,y=30)
-		self.text_box=Entry(self.tool_frame).place(x=30,y=60)
+		self.text_box=Entry(self.tool_frame)
+		self.text_box.place(x=30,y=60)
 		self.add_message1=Label(self.tool_frame,text="Enter quantity of Item").place(x=30,y=90)
-		self.text_box1=Entry(self.tool_frame).place(x=30,y=120)
+		self.text_box1=Entry(self.tool_frame)
+		self.text_box1.place(x=30,y=120)
 		self.add_message2=Label(self.tool_frame,text="Enter expiry date of Item (DD-MM-YYYY)").place(x=30,y=150)
-		self.text_box2=Entry(self.tool_frame).place(x=30,y=180)
-		self.enter= Button(self.tool_frame, text='Enter', command=the_inventory.add_item(self.text_box.get(),self.text_box1.get(),self.text_box2.get())).place(x=60,y=200)
-		print(the_inventory.inv)
+		self.text_box2=Entry(self.tool_frame)
+		self.text_box2.place(x=30,y=180)
+		self.enter_button= Button(self.tool_frame, text='Enter', command=the_inventory.add_item_middle)
+		self.enter_button.place(x=60,y=200)
+		
 		#self.bar_button = Button(self.tool_frame,text = 'Use Barcode').place(x=30, y=65)
 
 
