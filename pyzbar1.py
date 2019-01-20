@@ -21,9 +21,9 @@ def decode(im) : #function to decode the barcode pictures
  
   # Print results
   for obj in decodedObjects:
-    print('Type : ', obj.type)
-    print('Data : ', obj.data,'\n')
-     
+   # print('Type : ', obj.type)
+    #print('Data : ', obj.data,)
+    pass  
   return decodedObjects
  
  
@@ -58,4 +58,7 @@ def scan_code():
     frame = pic_cap()  
     decodedObjects = decode(frame)
     display(frame, decodedObjects)
-scan_code()
+    for obj in decodedObjects:
+      return((obj.data).decode("utf-8"))
+      #print((obj.data).decode("utf-8"))
+#print(scan_code())
