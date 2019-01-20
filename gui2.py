@@ -201,11 +201,16 @@ class Application:
 
 	# different functions for all tools and features
 		self.check_expiry()
+		
+	# stuff with the recipes
+	
+		
+
 	def new_frames(self):
 
 		# the two main frames
 
-		self.info_frame=Frame(self.main,height=150,width=600 ,bg='blue')
+		self.info_frame=Frame(self.main,height=150,width=600 ,background="blue")
 
 		self.tool_frame=Frame(self.main,height=350,width=600)
 
@@ -225,6 +230,7 @@ class Application:
 
 		self.destroy_frames()
 		self.new_frames()
+		self.help=Label(self.info_frame,text='This feature is used to add your items to the inventory \n the text boxes are used to type them in manually\n the barcode button is used to scan the barcode for the ingredient name \n we have also used the IBM cloud to for image recognition ', bg='blue').pack()
 		self.add_message=Label(self.tool_frame,text="Which item would you like to add ?").place(x=30,y=30)
 		self.text_box=Entry(self.tool_frame)
 		self.text_box.place(x=30,y=60)
@@ -245,6 +251,7 @@ class Application:
 	def remove_from_inventory_widget(self):
 		self.destroy_frames()
 		self.new_frames()
+		self.help1=Label(self.info_frame,text='This feature is used to remove your items from the inventory \n the text boxes are used to type the items manually\n the barcode button is used to scan the barcode for the ingredient name \n we have also used the IBM cloud to for image recognition ', bg='blue').pack()
 		self.add_message=Label(self.tool_frame,text="Which item would you like to remove ?").place(x=30,y=30)
 		self.text_box=Entry(self.tool_frame)
 		self.text_box.place(x=30,y=60)
@@ -269,6 +276,8 @@ class Application:
 	def print_inventory(self):
 		self.destroy_frames()
 		self.new_frames()
+		self.help2=Label(self.info_frame,text='This feature is used to show items from the inventory \n the tabular form can be used to view the name, expiry date and quantity of the item', bg='blue').pack()
+
 		self.tool_frame.config(background='white')
 		print(the_inventory.inv)
 		rows=len(the_inventory.inv)
@@ -305,12 +314,13 @@ class Application:
 	def show_recipes(self):
 		self.destroy_frames()
 		self.new_frames()
+		self.help3=Label(self.info_frame,text='This feature is used to find recipes based on the items you have \n in the future recipes can be ordered by the person  \n we will also be able to order from amazon pantry and other services in the future', bg='blue').pack()
 
 		heading1=Label(self.tool_frame, text="ALL RECIPES").place(x=20, y=5)
 		heading2=Label(self.tool_frame, text="AVAILABLE RECIPES").place(x=300, y=5)
 		# display list of all possible recipes
 		self.all_rec_list = Listbox (self.tool_frame, width=25, height=150 )
-		self.all_rec_list.place(x = 20, y=20)
+		self.all_rec_list.place(x = 35, y=20)
 
 		self.contents = recipe_list.all_recipes
 
@@ -321,12 +331,9 @@ class Application:
 		# display list of all available recipes
 		self.all_avail_list = Listbox (self.tool_frame, width=25, height=150 )
 		self.all_avail_list.place(x = 300, y=20)
-		
 		#get a list of names and quantities of items in inventory
 		#self.available_items=[]
 		#or i in range(0,len(the_inventory.inv)):
-
-
 
 
 		self.available_items=[]
