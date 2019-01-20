@@ -61,4 +61,3 @@ def scan_code():
     for obj in decodedObjects:
       return((obj.data).decode("utf-8"))
       #print((obj.data).decode("utf-8"))
-#print(scan_code())

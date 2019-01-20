@@ -352,7 +352,7 @@ class Application:
 
 	def sms_and_messagebox(self,text=None):
 		self.message = messagebox.showinfo('alert', text)
-		twilio_trial.SMS_sender('text')
+		twilio_trial.SMS_sender(text)
 
 	def if_expire(self, items=None):
 		now = datetime.datetime.now()
