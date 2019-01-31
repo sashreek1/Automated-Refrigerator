@@ -4,7 +4,7 @@ import ast
 from watson_developer_cloud import VisualRecognitionV3, \
     WatsonApiException
 visual_recognition = VisualRecognitionV3(
-    '2018-03-19', iam_apikey='zpgZhvMTq0nNWqe17lsGxMXOMmTaETMzxziKFFGeQzX2')
+    '2018-03-19', iam_apikey='zpgZhvMTq0nNWqe17')#your Api key here
 def pic_cap():#capturing pictures
     cam = cv2.VideoCapture(1)
     ret, frame = cam.read()
